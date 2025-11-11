@@ -54,6 +54,19 @@ const getInitialData = (): AppData => {
                 settings: deepMerge(DEFAULT_SETTINGS, parsedData.settings || {}),
             };
 
+            // Data integrity validation: Ensure critical properties have the correct type.
+            // This prevents crashes if localStorage data is corrupted (e.g., an array is stored as null).
+            dataToProcess.entries = Array.isArray(dataToProcess.entries) ? dataToProcess.entries : defaultData.entries;
+            dataToProcess.receipts = Array.isArray(dataToProcess.receipts) ? dataToProcess.receipts : defaultData.receipts;
+            dataToProcess.monthlyBalances = isObject(dataToProcess.monthlyBalances) ? dataToProcess.monthlyBalances : defaultData.monthlyBalances;
+            if (dataToProcess.settings) {
+                dataToProcess.settings.classRolls = Array.isArray(dataToProcess.settings.classRolls) ? dataToProcess.settings.classRolls : DEFAULT_SETTINGS.classRolls;
+                dataToProcess.settings.cooks = Array.isArray(dataToProcess.settings.cooks) ? dataToProcess.settings.cooks : DEFAULT_SETTINGS.cooks;
+            } else {
+                // If settings object is missing entirely, restore it.
+                dataToProcess.settings = DEFAULT_SETTINGS;
+            }
+
             // MIGRATION: Convert old inspection report object to new string format
             if (dataToProcess.settings?.inspectionReport?.inspectedBy && isObject(dataToProcess.settings.inspectionReport.inspectedBy)) {
                 const oldInspectedBy = dataToProcess.settings.inspectionReport.inspectedBy as any;
