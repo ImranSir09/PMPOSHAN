@@ -1,0 +1,26 @@
+{
+  "name": "pm-poshan-pro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react-dom": "^19.1.1",
+    "react": "^19.1.1",
+    "recharts": "^2.12.7",
+    "@google/genai": "^1.16.0",
+    "nanoid": "^5.1.5",
+    "@supabase/supabase-js": "^2.58.0",
+    "@vercel/node": "^5.3.24"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

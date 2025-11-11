@@ -1,0 +1,5 @@
+{
+  "name": "PM Poshan Pro",
+  "description": "A comprehensive, offline-first, mobile-friendly web application for managing and tracking PM-POSHAN (Mid-Day Meal) consumption in schools. Features a modern UI, daily entry management, monthly summaries, PDF reporting, and data backup.",
+  "requestFramePermissions": []
+}
