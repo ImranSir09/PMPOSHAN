@@ -50,9 +50,12 @@ const Header: React.FC = () => {
                 />
             )}
             <header className="relative z-40 flex items-center justify-between p-3 bg-white/80 dark:bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-200/50 dark:border-white/20 shadow-md">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2 sm:space-x-3">
                     <div className="p-1 bg-sky-600 rounded-lg">
                         <AppIcon />
+                    </div>
+                    <div className="p-1 bg-white dark:bg-slate-700 rounded-lg shadow-inner">
+                         <img src="https://i.postimg.cc/ht8H9tn2/Beige-and-Black-Minimalist-PM-Initials-Logo-20251114-171544-0000.png" alt="PM Poshan Logo" className="h-8 w-8 rounded-md" />
                     </div>
                     <div>
                         <h1 className="text-sm font-bold tracking-tight text-slate-900 dark:text-white">{data.settings.schoolDetails.name}</h1>
