@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useData } from '../../hooks/useData';
@@ -98,9 +97,7 @@ const LoginPage: React.FC = () => {
                 </div>
                 <div className="w-full max-w-sm z-10">
                      <div className="text-center mb-4">
-                        <div className="inline-block p-2 bg-sky-600 rounded-xl mb-2">
-                             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" viewBox='0 0 100 100' fill='none'><rect width='100' height='100' rx='20' fill='transparent'/><path d='M30 70C30 58.9543 38.9543 50 50 50C61.0457 50 70 58.9543 70 70' stroke='white' stroke-width='8' stroke-linecap='round'/><path d='M50 50V30' stroke='white' stroke-width='8' stroke-linecap='round'/><path d='M40 40L50 30L60 40' stroke='white' stroke-width='8' stroke-linecap='round'/></svg>
-                        </div>
+                        <img src="https://i.postimg.cc/MZMdkg1j/1761750750527.png" alt="PM Poshan Logo" className="h-16 w-16 rounded-full inline-block mb-2" />
                         <h1 className="text-xl font-bold text-slate-900 dark:text-white">Welcome, {data.auth?.username}</h1>
                         <p className="text-sm text-slate-500 dark:text-slate-300">PM Poshan Pro</p>
                     </div>
