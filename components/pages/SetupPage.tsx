@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { useAuth } from '../../hooks/useAuth';
 import { useToast } from '../../hooks/useToast';
@@ -110,6 +109,13 @@ const SetupPage: React.FC = () => {
                     <div className="animated-blob blob-2 bg-teal-300 dark:bg-teal-900"></div>
                 </div>
                 <div className="w-full max-w-md z-10">
+                    <div className="text-center mb-4">
+                        <div className="inline-block p-2 bg-sky-600 rounded-xl mb-2">
+                             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" viewBox='0 0 100 100' fill='none'><rect width='100' height='100' rx='20' fill='transparent'/><path d='M30 70C30 58.9543 38.9543 50 50 50C61.0457 50 70 58.9543 70 70' stroke='white' stroke-width='8' stroke-linecap='round'/><path d='M50 50V30' stroke='white' stroke-width='8' stroke-linecap='round'/><path d='M40 40L50 30L60 40' stroke='white' stroke-width='8' stroke-linecap='round'/></svg>
+                        </div>
+                        <h1 className="text-xl font-bold text-slate-900 dark:text-white">PM Poshan Pro</h1>
+                        <p className="text-sm text-slate-500 dark:text-slate-300">Application Setup</p>
+                    </div>
                     <Card title="First-Time Setup">
                         <p className="text-xs text-slate-600 dark:text-slate-300 mb-4">
                             Welcome! Please enter your signup key and create an account to secure this application.

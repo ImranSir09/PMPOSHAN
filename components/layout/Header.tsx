@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useData } from '../../hooks/useData';
 import { useTheme } from '../../hooks/useTheme';
@@ -11,7 +10,6 @@ const SunIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height=
 const MoonIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>;
 const BellIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>;
 const LogoutIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>;
-const AppIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox='0 0 100 100' fill='none'><rect width='100' height='100' rx='20' fill='%230284c7'/><path d='M30 70C30 58.9543 38.9543 50 50 50C61.0457 50 70 58.9543 70 70' stroke='white' stroke-width='8' stroke-linecap='round'/><path d='M50 50V30' stroke='white' stroke-width='8' stroke-linecap='round'/><path d='M40 40L50 30L60 40' stroke='white' stroke-width='8' stroke-linecap='round'/></svg>;
 
 const Header: React.FC = () => {
     const { data } = useData();
@@ -51,9 +49,6 @@ const Header: React.FC = () => {
             )}
             <header className="relative z-40 flex items-center justify-between p-3 bg-white/80 dark:bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-200/50 dark:border-white/20 shadow-md">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                    <div className="p-1 bg-sky-600 rounded-lg">
-                        <AppIcon />
-                    </div>
                     <div className="p-1 bg-white dark:bg-slate-700 rounded-lg shadow-inner">
                          <img src="https://i.postimg.cc/ht8H9tn2/Beige-and-Black-Minimalist-PM-Initials-Logo-20251114-171544-0000.png" alt="PM Poshan Logo" className="h-8 w-8 rounded-md" />
                     </div>
