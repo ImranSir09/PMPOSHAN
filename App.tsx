@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DataProvider, useData } from './hooks/useData';
 import { ThemeProvider } from './hooks/useTheme';
 import { NotificationProvider } from './hooks/useNotifications';
@@ -33,6 +33,26 @@ const AppContent: React.FC = () => {
     const { data } = useData();
     const { isAuthenticated } = useAuth();
     
+    useEffect(() => {
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+            // Start fade out animation
+            loader.style.opacity = '0';
+            
+            // Remove the loader from the DOM after the transition is complete
+            const handleTransitionEnd = () => {
+                loader.remove();
+                loader.removeEventListener('transitionend', handleTransitionEnd);
+            };
+            loader.addEventListener('transitionend', handleTransitionEnd);
+
+            // As a fallback in case the event doesn't fire, remove it after a timeout
+            setTimeout(() => {
+                loader?.remove();
+            }, 500); // This duration should match the CSS transition duration
+        }
+    }, []);
+
     const needsSetup = !data.auth?.password;
 
     if (needsSetup) {

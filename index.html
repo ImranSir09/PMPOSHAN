@@ -105,6 +105,39 @@
           height: 100%;
         }
       }
+
+      /* App Loader Styles */
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8fafc; /* bg-slate-50 */
+        transition: opacity 0.5s ease-out;
+      }
+
+      html.dark #app-loader {
+        background-color: #0f172a; /* bg-slate-900 */
+      }
+
+      #app-loader img {
+        width: 80px;
+        height: 80px;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.8;
+          transform: scale(1.05);
+        }
+      }
     </style>
   <script type="importmap">
 {
@@ -124,6 +157,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 </head>
   <body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-500">
+    <div id="app-loader">
+      <img src="https://i.postimg.cc/jS6JTkwz/20251114-191947.png" alt="Loading PM Poshan Pro..." />
+    </div>
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

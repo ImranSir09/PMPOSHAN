@@ -110,7 +110,7 @@ const SetupPage: React.FC = () => {
                 </div>
                 <div className="w-full max-w-md z-10">
                     <div className="text-center mb-4">
-                        <img src="https://i.postimg.cc/MZMdkg1j/1761750750527.png" alt="PM Poshan Logo" className="h-16 w-16 rounded-full inline-block mb-2" />
+                        <img src="https://i.postimg.cc/jS6JTkwz/20251114-191947.png" alt="PM Poshan Logo" className="h-16 w-16 rounded-full inline-block mb-2" />
                         <h1 className="text-xl font-bold text-slate-900 dark:text-white">PM Poshan Pro</h1>
                         <p className="text-sm text-slate-500 dark:text-slate-300">Application Setup</p>
                     </div>

@@ -49,7 +49,7 @@ const Header: React.FC = () => {
             )}
             <header className="relative z-40 flex items-center justify-between p-3 bg-white/80 dark:bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-200/50 dark:border-white/20 shadow-md">
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                    <img src="https://i.postimg.cc/MZMdkg1j/1761750750527.png" alt="PM Poshan Logo" className="h-10 w-10 rounded-full" />
+                    <img src="https://i.postimg.cc/jS6JTkwz/20251114-191947.png" alt="PM Poshan Logo" className="h-10 w-10 rounded-full" />
                     <div>
                         <h1 className="text-sm font-bold tracking-tight text-slate-900 dark:text-white">{data.settings.schoolDetails.name}</h1>
                         <p className="text-xs text-slate-500 dark:text-slate-300">PM Poshan Pro</p>
